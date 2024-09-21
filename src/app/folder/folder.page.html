@@ -14,8 +14,24 @@
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
-    <strong class="capitalize">{{ folder }}</strong>
-    <p>Explore <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+
+  <ion-item>
+    <ion-label>
+      <h1>List of animals</h1>
+    </ion-label>
+  </ion-item>
+
+  <ion-list>
+   <ion-item>
+      <ion-input [(ngModel)]="val1" label="Input" placeholder="Enter animal name"></ion-input>
+    </ion-item>
+    
+  
+    <ion-button (click)="btn_click()">Add</ion-button>
+    
+    <ion-item>
+      <ion-label>{{value}}</ion-label>
+    </ion-item>
+  </ion-list>
+
 </ion-content>

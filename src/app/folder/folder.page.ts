@@ -7,10 +7,14 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./folder.page.scss'],
 })
 export class FolderPage implements OnInit {
+  value = "---"
+  val1 = "?"
   public folder!: string;
   private activatedRoute = inject(ActivatedRoute);
   constructor() {}
-
+  btn_click(){
+    this.value = this.val1
+  }
   ngOnInit() {
     this.folder = this.activatedRoute.snapshot.paramMap.get('id') as string;
   }
